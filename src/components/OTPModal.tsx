@@ -1,7 +1,8 @@
+"use client";
+
 import {
   AlertDialog,
   AlertDialogAction,
-  AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
   AlertDialogFooter,
@@ -12,13 +13,13 @@ import {
 import {
   InputOTP,
   InputOTPGroup,
-  InputOTPSeparator,
   InputOTPSlot,
 } from "@/components/ui/input-otp";
 import Image from "next/image";
 import React, { useState } from "react";
-import { type } from "../../node_modules/@radix-ui/react-alert-dialog/src/AlertDialog";
 import { Button } from "./ui/button";
+import { sendEmailOTP, verifySecret } from "@/lib/actions/user.actions";
+import { useRouter } from "next/navigation";
 
 const OtpModal = ({
   accountId,
@@ -27,6 +28,7 @@ const OtpModal = ({
   accountId: string;
   email: string;
 }) => {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(true);
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -36,6 +38,8 @@ const OtpModal = ({
     setIsLoading(true);
     try {
       // Call API to Verify OTP
+      const sessionId = await verifySecret({ accountId, password });
+      if (sessionId) router.push("/");
     } catch (error) {
       console.log("failed to verify OTP", error);
     }
@@ -44,6 +48,7 @@ const OtpModal = ({
 
   const handleResendOtp = async () => {
     //cal API to resend OTP
+    await sendEmailOTP({ email });
   };
 
   return (
