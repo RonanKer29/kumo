@@ -27,4 +27,4 @@ export const navItems = [
 ];
 
 export const avatarPlaceholderUrl =
-  "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png";
+  "https://img.freepik.com/psd-premium/rendu-3d-du-personnage-avatar_23-2150611743.jpg?w=1380";
