@@ -1,7 +1,6 @@
 "use server";
 
 import { InputFile } from "node-appwrite/file";
-import { UploadFileProps } from "../../../types";
 import { createAdminClient } from "../appwrite";
 import { appwriteConfig } from "../appwrite/config";
 import { ID, Models, Query } from "node-appwrite";
@@ -79,6 +78,7 @@ export const getFiles = async () => {
     if (!currentUser) throw new Error("User not found");
 
     const queries = createQueries(currentUser);
+
     const files = await databases.listDocuments(
       appwriteConfig.databaseId,
       appwriteConfig.filesCollectionId,
@@ -87,5 +87,29 @@ export const getFiles = async () => {
     return parseStringify(files);
   } catch (error) {
     handleError(error, "Failed to get files");
+  }
+};
+
+export const renameFile = async ({
+  fileId,
+  name,
+  extension,
+  path,
+}: RenameFileProps) => {
+  const { databases } = await createAdminClient();
+  try {
+    const newName = `${name}.${extension}`;
+    const updatedFile = await databases.updateDocument(
+      appwriteConfig.databaseId,
+      appwriteConfig.filesCollectionId,
+      fileId,
+      {
+        name: newName,
+      }
+    );
+    revalidatePath(path);
+    return parseStringify(updatedFile);
+  } catch (error) {
+    handleError(error, "Failed to rename file");
   }
 };
