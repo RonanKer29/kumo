@@ -32,7 +32,6 @@ const Card = ({ file }: { file: Models.Document }) => {
           By: {file.owner.fullName}
         </p>
       </div>
-      {file.name}
     </Link>
   );
 };
