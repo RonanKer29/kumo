@@ -26,11 +26,6 @@ export const navItems = [
   },
 ];
 
-export const avatarPlaceholderUrl =
-  "https://img.freepik.com/psd-premium/rendu-3d-du-personnage-avatar_23-2150611743.jpg?w=1380";
-
-export const MAX_FILE_SIZE = 50 * 1024 * 1024; // 50MB
-
 export const actionsDropdownItems = [
   {
     label: "Rename",
@@ -58,3 +53,35 @@ export const actionsDropdownItems = [
     value: "delete",
   },
 ];
+
+export const sortTypes = [
+  {
+    label: "Date created (newest)",
+    value: "$createdAt-desc",
+  },
+  {
+    label: "Created Date (oldest)",
+    value: "$createdAt-asc",
+  },
+  {
+    label: "Name (A-Z)",
+    value: "name-asc",
+  },
+  {
+    label: "Name (Z-A)",
+    value: "name-desc",
+  },
+  {
+    label: "Size (Highest)",
+    value: "size-desc",
+  },
+  {
+    label: "Size (Lowest)",
+    value: "size-asc",
+  },
+];
+
+export const avatarPlaceholderUrl =
+  "https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg";
+
+export const MAX_FILE_SIZE = 50 * 1024 * 1024; // 50MB
