@@ -20,10 +20,10 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
     <aside className="sidebar">
       <Link href="/">
         <Image
-          src="/assets/icons/logo-full-brand.svg"
+          src="/assets/icons/kumo-logo-white.svg"
           alt="logo"
-          width={160}
-          height={50}
+          width={250}
+          height={82}
           className="hidden h-auto lg:block"
         />
 
@@ -62,7 +62,7 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
         </ul>
       </nav>
       <Image
-        src="/assets/images/files-2.png"
+        src="/assets/images/logo-image-full.png"
         alt="logo"
         width={506}
         height={418}
