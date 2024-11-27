@@ -422,7 +422,7 @@
     @apply h5 mt-9 flex-1 gap-1 text-brand !important;
   }
   .sidebar-nav-item {
-    @apply flex text-light-100 gap-4 rounded-xl lg:w-full justify-center lg:justify-start items-center h5 lg:px-[30px] h-[52px] lg:rounded-full !important;
+    @apply flex text-light-100 gap-4 rounded-xl lg:w-full justify-center lg:justify-start items-center h5 lg:px-[30px] h-[52px] lg:rounded-full hover:text-brand  !important;
   }
   .sidebar-user-info {
     @apply mt-4 flex items-center justify-center gap-2 rounded-full bg-brand-50 p-1 text-light-100 lg:justify-start lg:p-3 !important;
@@ -433,6 +433,9 @@
 
   .shad-active {
     @apply bg-brand text-white shadow-drop-2 !important;
+  }
+  .shad-active:hover {
+    @apply text-white !important; /* Assurez que le texte reste blanc */
   }
 
   /* Sort */

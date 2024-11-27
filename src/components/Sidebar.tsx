@@ -42,7 +42,7 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
               <li
                 className={cn(
                   "sidebar-nav-item",
-                  pathname === url && "shad-active"
+                  pathname === url ? "shad-active" : "hover:text-brand"
                 )}
               >
                 <Image
