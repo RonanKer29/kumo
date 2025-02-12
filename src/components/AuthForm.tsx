@@ -74,6 +74,14 @@ const AuthForm = ({ type }: { type: FormType }) => {
           <h1 className="form-title">
             {type === "sign-in" ? "Sign In" : "Sign Up"}
           </h1>
+          <h1 className="text-xl justify-center items-center mb-8 sm:mb-1 text-left">
+            <span className="text-brand font-bold">
+              {type === "sign-up" ? "Quick and easy!" : ""}
+            </span>{" "}
+            {type === "sign-up"
+              ? "Just enter your name and email, and you’re in with a one-time code that you will receive by email."
+              : "Just enter your email address to login."}
+          </h1>
           {type === "sign-up" && (
             <FormField
               control={form.control}
