@@ -7,12 +7,6 @@
 <h3 align="center">Storage and File Sharing Platform</h3>
 </div>
 
-## 📋 <a name="table">Table of Contents</a>
-
-1. 🤖 [Introduction](#introduction)
-2. ⚙️ [Tech Stack](#tech-stack)
-3. 🔋 [Features](#features)
-
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
 - React 19
