@@ -36,3 +36,9 @@
 
 👉 **Modern Responsive Design**: A fresh and minimalist UI that emphasizes usability, ensuring a clean aesthetic across all devices.
 
+
+| ![Capture 1](assets/kumo-1.png) | ![Capture 2](assets/kumo-2.png) |
+|------------------------------------|------------------------------------|
+| ![Capture 3](assets/kumo-3.png) | ![Capture 4](assets/kumo-4.png) |
+
+
