@@ -1,7 +1,7 @@
 <div align="center">
   <br />
     <a href="https://kumocloud.vercel.app/" target="_blank">
-      <img src="https://i.postimg.cc/gkLV9RBh/Kumo-readme.png" alt="Project Banner">
+      <img src="https://i.postimg.cc/gkLV9RBh/Kumo-readme.png" alt="Project Banner style="border-radius: 8px">
     </a>
   <br />
 <h3 align="center">Storage and File Sharing Platform</h3>
